@@ -13,7 +13,7 @@ generate('Yo soy de Mexico.', 'soy_de')
 generate('Nunca he visitado allí.', 'nunca_visitado')
 
 generate('¿Qué tal?', 'que_tal')
-generate('Que bueno.', 'que_bueno')
+generate('Qué bueno.', 'que_bueno')
 generate('Estoy feliz, me encanta este clima.', 'estoy_feliz')
 
 generate('¿Que haces para trabajo?', 'que_haces')

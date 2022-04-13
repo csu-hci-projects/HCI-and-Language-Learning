@@ -36,6 +36,10 @@ while running:
         
         if event.type == MUSIC_END:
             ana_talking_moving = False
+            ana_talking = [
+                    pygame.image.load("./images/ana-neutral.png"),
+                    pygame.image.load("./images/ana-neutral-talking.png")
+                ]
         if event.type == pygame.KEYDOWN:
             ana_talking_moving = True
             if event.key == pygame.K_1:
@@ -93,6 +97,10 @@ while running:
                 pygame.mixer.music.load("./sounds/hola.mp3")
                 pygame.mixer.music.play()
             elif event.key == pygame.K_0:
+                ana_talking = [
+                    pygame.image.load("./images/ana-confused.png"),
+                    pygame.image.load("./images/ana-confused-talking.png")
+                ]
                 pygame.mixer.music.load("./sounds/no_entiendo.mp3")
                 pygame.mixer.music.play()
 
