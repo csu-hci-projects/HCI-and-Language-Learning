@@ -16,7 +16,7 @@ generate('¿Qué tal?', 'que_tal')
 generate('Qué bueno.', 'que_bueno')
 generate('Estoy feliz, me encanta este clima.', 'estoy_feliz')
 
-generate('¿Que haces para trabajo?', 'que_haces')
+generate('¿Qué haces para trabajo?', 'que_haces')
 generate('Trabajo como una maestra de español.', 'trabajo_como')
 generate('Ah, que interesante.', 'interesante')
 
