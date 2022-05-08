@@ -1,0 +1,296 @@
+% $Id: template.tex 11 2007-04-03 22:25:53Z jpeltier $
+
+\documentclass{vgtc}                          % final (conference style)
+%\documentclass[review]{vgtc}                 % review
+%\documentclass[widereview]{vgtc}             % wide-spaced review
+%\documentclass[preprint]{vgtc}               % preprint
+%\documentclass[electronic]{vgtc}             % electronic version
+
+%% Uncomment one of the lines above depending on where your paper is
+%% in the conference process. ``review'' and ``widereview'' are for review
+%% submission, ``preprint'' is for pre-publication, and the final version
+%% doesn't use a specific qualifier. Further, ``electronic'' includes
+%% hyperreferences for more convenient online viewing.
+
+%% Please use one of the ``review'' options in combination with the
+%% assigned online id (see below) ONLY if your paper uses a double blind
+%% review process. Some conferences, like IEEE Vis and InfoVis, have NOT
+%% in the past.
+
+%% Figures should be in CMYK or Grey scale format, otherwise, colour 
+%% shifting may occur during the printing process.
+
+%% These few lines make a distinction between latex and pdflatex calls and they
+%% bring in essential packages for graphics and font handling.
+%% Note that due to the \DeclareGraphicsExtensions{} call it is no longer necessary
+%% to provide the the path and extension of a graphics file:
+%% \includegraphics{diamondrule} is completely sufficient.
+%%
+\ifpdf%                                % if we use pdflatex
+  \pdfoutput=1\relax                   % create PDFs from pdfLaTeX
+  \pdfcompresslevel=9                  % PDF Compression
+  \pdfoptionpdfminorversion=7          % create PDF 1.7
+  \ExecuteOptions{pdftex}
+  \usepackage{graphicx}                % allow us to embed graphics files
+  \DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg} % for pdflatex we expect .pdf, .png, or .jpg files
+\else%                                 % else we use pure latex
+  \ExecuteOptions{dvips}
+  \usepackage{graphicx}                % allow us to embed graphics files
+  \DeclareGraphicsExtensions{.eps}     % for pure latex we expect eps files
+\fi%
+
+%% it is recomended to use ``\autoref{sec:bla}'' instead of ``Fig.~\ref{sec:bla}''
+\graphicspath{{figures/}{pictures/}{images/}{./}} % where to search for the images
+
+\usepackage{microtype}                 % use micro-typography (slightly more compact, better to read)
+\PassOptionsToPackage{warn}{textcomp}  % to address font issues with \textrightarrow
+\usepackage{textcomp}                  % use better special symbols
+\usepackage{mathptmx}                  % use matching math font
+\usepackage{times}                     % we use Times as the main font
+\renewcommand*\ttdefault{txtt}         % a nicer typewriter font
+\usepackage{cite}                      % needed to automatically sort the references
+\usepackage{tabu}                      % only used for the table example
+\usepackage{booktabs}                  % only used for the table example
+%% We encourage the use of mathptmx for consistent usage of times font
+%% throughout the proceedings. However, if you encounter conflicts
+%% with other math-related packages, you may want to disable it.
+
+
+%% If you are submitting a paper to a conference for review with a double
+%% blind reviewing process, please replace the value ``0'' below with your
+%% OnlineID. Otherwise, you may safely leave it at ``0''.
+\onlineid{0}
+
+%% declare the category of your paper, only shown in review mode
+\vgtccategory{Research}
+
+%% allow for this line if you want the electronic option to work properly
+\vgtcinsertpkg
+
+%% In preprint mode you may define your own headline.
+%\preprinttext{To appear in an IEEE VGTC sponsored conference.}
+
+%% Paper title.
+
+\title{Evaluating Improvements in Speaking Ability in Passive Speakers Aided by a Virtual Avatar}
+
+%% This is how authors are specified in the conference style
+
+%% Author and Affiliation (single author).
+%%\author{Roy G. Biv\thanks{e-mail: roy.g.biv@aol.com}}
+%%\affiliation{\scriptsize Allied Widgets Research}
+
+%% Author and Affiliation (multiple authors with single affiliations).
+%%\author{Roy G. Biv\thanks{e-mail: roy.g.biv@aol.com} %will
+%%\and Ed Grimley\thanks{e-mail:ed.grimley@aol.com} %
+%%\and Martha Stewart\thanks{e-mail:martha.stewart@marthastewart.com}}
+%%\affiliation{\scriptsize Martha Stewart Enterprises \\ Microsoft Research}
+
+%% Author and Affiliation (multiple authors with multiple affiliations)
+\author{Maria Samson\thanks{e-mail: samsonmn@rams.colostate.edu}\\ %
+        \scriptsize Author}
+
+%% A teaser figure can be included as follows, but is not recommended since
+%% the space is now taken up by a full width abstract.
+%\teaser{
+%  \includegraphics[width=1.5in]{sample.eps}
+%  \caption{Lookit! Lookit!}
+%}
+
+%% Abstract section.
+\abstract{This paper discusses computer assisted language learning through related works and by also
+discussing a prototype which would further explore the effects of learning Spanish through
+a virtual agent. %
+} % end of abstract
+
+%% ACM Computing Classification System (CCS). 
+%% See <http://www.acm.org/class/1998/> for details.
+%% The ``\CCScat'' command takes four arguments.
+
+
+
+%% Copyright space is enabled by default as required by guidelines.
+%% It is disabled by the 'review' option or via the following command:
+% \nocopyrightspace
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% START OF THE PAPER %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%% The ``\maketitle'' command must be the first command after the
+%% ``\begin{document}'' command. It prepares and prints the title block.
+
+%% the only exception to this rule is the \firstsection command
+\firstsection{Introduction}
+
+\maketitle
+
+%% \section{Introduction} %for journal use above \firstsection{..} instead
+Digital language learning services have been steadily rising in popularity \cite{Sung:2015}.
+After a certain point, however, it is not necessary to continue memorizing new vocabulary, but to enhance one’s conversational speaking abilities.
+The best method of accomplishing this is through simple practice – conversing with someone fluent in the language \cite{Burger:2015}.
+Most people, for whatever reasons, do not have access to a tutor that can evaluate their skills and help them improve.
+It is for these reasons that this proposal puts forth an application that assists in language learning by engaging with the user through various scenarios in the selected language, where the user will be able to respond using a microphone.
+We hypothesize that participants will have increased accuracy and confidence in their Spanish-speaking abilities as a result of conversing with a virtual avatar over 2 sessions.
+For the purposes of this prototype, only the Spanish language will be used.
+
+
+
+\section{Motivation}
+One of the most effective ways to quickly learn a new language is through immersion and practicing speaking \cite{Burger:2015}.
+While the most effective way to practice this is by finding a fluent partner \cite{Emde:2002}, unfortunately many foreign language learners do not have access to a native-speaker with whom to practice conversing with.
+Others are ashamed of their current speaking abilities, and would prefer to practice alone to build some preliminary proficiency.
+This is especially prevalent in passively bilingual speakers -- those who have native or near-native listening comprehension, but limited speaking abilities, who happen to make up the participant pool of the experiment being conducted \cite{Chumak:2008}.
+A solution to this is through the use of virtual conversation partners, where the user speaks into a microphone and the bot responds accordingly.
+But what is the purpose of this project beyond creating a tool?
+The aim of this project is to determine if participants are able to retain information, and perform at an equal or greater level than their first trial.
+
+
+
+\section{State-of-the-Art}
+Among the first iterations of a product that assists in more interactive language learning was the development of audio tapes.
+Rosetta Stone is one such brand that plays a sample sentence before prompting the user to respond. One glaring issue with this is that the speaker receives no feedback on their pronunciation whatsoever.
+Language tapes are quite limited in their interactiveness, which is something that has been remedied thanks to smartphones’ built-in microphones.
+Currently, there are several similar language-learning applications currently available, such as Duolingo and Babbel, both of which offer speech practice, but only in the form of pronunciation practice, rather than through quick-thinking conversation \cite{Bajorek:2017}.
+Duolingo does have a well developed method for perfecting pronunciation, something that most technologies in this domain lack thus far, but is similarly lacking in that users cannot maintain a prolonged conversation with it \cite{Bajorek:2017}.
+Spanish in particular has been quite heavily studied in terms of learning a second language \cite{Reyes:2020}, which is helpful for the purposes of this experiment, as there is existing research to build upon.
+It has been established that computer assisted language learning provides users with entertainment and novelty, allows for more easily accessible interaction, and provides learners with the chance to practice their skills in a slightly more natural setting \cite{Ratnaningsih:2019}.
+While it is clear that robots have a better aptitude for assisting in language learning \cite{Kennedy:2016}\cite{Berghe:2018} -- at least in children -- we hope to explore if there is a similar, though perhaps less pronounced, effect with a virtual agent instead.
+
+
+\section{Methodology}
+\subsection{Design}
+The core component of this project is a virtual agent that speaks to the user in a casual way by mimicking a real conversation one would have with a friendly acquaintance.
+This agent will be henceforth referred to as Ana.
+The user will select a language to begin practicing at the beginning of the conversation, to begin, this language will be Spanish.
+Once a language has been selected, Ana appears and introduces itself to the user before then asking the user questions about themself in a polite conversational manner.
+These questions are determined to be generic enough and at an appropriate level that the user will likely have some vocabulary sufficient to answer the question. For each question or prompt, the user will be instructed to respond using a provided microphone as the input mechanism.
+This microphone will not be registered by Ana, but will allow the experiment proctor to respond using a Wizard of Oz approach.
+The proctor will command Ana to respond using a variety of prerecorded, computer generated sentences, provided that what the user said made sense, otherwise it will politely inform the user that it did not understand, and if they could please repeat that.
+After several unsuccessful attempts from the user in a row, Ana will simply change the subject. 
+The user will use whatever computer they have at their disposal to interact with Ana, which will be screen-shared via the experiment proctor.
+
+The prototype of Ana will appear quite simply: Ana, a cartoon-looking woman, is standing in what appears to be a cafe (see Figure 1).
+We decided to use a two-dimensional virtual avatar in order to avoid accidentally entering the "uncanny valley" with her as it is easier to avoid in 2D \cite{Seymour:2019}.
+Accidentally entering the uncanny valley would inevitably have confounding effects on the experiment due to participants feeling uncomfortable from her uncanniness. 
+The presence of the agent alone is what we are studying, so there is no need to include fancy detail or graphics animations.
+She will have a few preset facial expressions (happy, confused, neutral), but nothing beyond that.
+She is operated by the experiment proctor using the keyboard as a soundboard to play prerecorded, computer-generated questions, answers, and responses, unbeknownst to the participant.
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=7cm]{ana (2).jpg}
+    \caption{An image of how Ana appears to the user.}
+    \label{fig:Ana}
+\end{figure}
+
+
+
+\subsection{Evaluation}
+
+\subsubsection{Participants}
+A total of 10 participants were used in this study, of ages varying between 13-24 (average age M=17.8 years, SD=3.5 years. 6F, 4M).
+They are all relatives of the experimenter (siblings, cousins, cousins' children), and are all passively bilingual due to having at least one Spanish-speaking parent -- meaning they have native or near-native listening/comprehension fluency, but limited speaking ability.
+Given the participants' similar upbringings, they also have largely similar vocabularies deriving from northern Mexico, which adds an added layer of control to the experiment.
+It also allows us to evaluate based solely on speaking ability, as there are extremely low chances of speech errors being attributed to inaccurate comprehension.
+
+\subsubsection{Measures}
+Speaking improvements were measured through a survey and observations recorded over two conversation sessions one week apart.
+In addition to measuring changes in participants' perception of their speaking abilities, we also measure their gains through quantitative aspects listed below.
+These measurements were gathered by recording each session (with consent) then going back and counting/calculating each point individually.
+These sessions sought to evaluate various aspects of their speaking abilities, including:
+
+\begin{itemize}
+    \item response time; time between Ana finishing her statement/question and user response. Taken for responses greater than 2 words or longer than 1 second.
+    \item rate of speech; user’s spoken words per minute per response. Taken for responses greater than 2 words or longer than 1 second.
+    \item speech error rate; severe pronunciation or grammatical errors, measured by how often "Ana", in this case the experiment proctor, does not understand the user.
+    \item comprehension error rate; when the user does not understand something Ana says, and/or responds with something irrelevant to the subject (as determined by the experiment proctor).
+    This measure will likely be extremely low, given the participants' passive bilingualism, however it would be relevant given a group of  non-native participants.
+\end{itemize}
+
+\subsubsection{Conditions}
+The independent variable here is the vehicle in which users are practicing their Spanish speaking abilities, in this case via Ana.
+The dependent variables were discussed above in Measures.
+Control variables include; regional dialects (northern Mexico), approximate comprehension ability (native/near-native), upper threshold for speaking ability (participants never or rarely speak Spanish), and method through which the session is administered (over Discord screen-sharing).
+Random variables include; age, gender, geographical location, monitor-size, Ana's volume, and anything else not specified as a control variable.
+
+\subsubsection{Procedure}
+Over a Discord call, after making general small talk, the experimenter explained the objective of this experiment and outlined the procedure.
+The participant then filled out a survey logging their current Spanish abilities.
+This survey was used to exclude participants with speaking fluency over the desired threshold for this experiment.
+The survey logged the user's self reported (1-5) Spanish listening comprehension skills, Spanish speaking skills, Spanish reading skills, frequency in which they listen to Spanish, frequency in which they speak in Spanish, and frequency in which they read in Spanish. 
+
+Using Discord's screen-sharing feature, the experimenter pulled up Ana and demonstrated what she sounds like.
+This also allowed the participant to make any necessary changes to their computer system, such as increasing the volume.
+Once the participant indicated they were ready, the proctor began using Ana to ask questions to the user, and generally engage in conversation.
+When Ana's conversation options were exhausted, or the participant indicated they wished to end the conversation, the participant was then asked to fill out the same survey as before.
+One week later, the procedure was repeated, using different prerecorded questions and answers from Ana, but which were approximately the same level of difficulty to respond to.
+
+
+
+\section{Results and Discussion}
+Upfront, there is the obvious problem of the experiment's small number of participants, therefore these results should be taken with a grain of salt, as they are representative of only a small niche portion of Spanish speakers.
+One of the questions that confused several of the  younger participants was "Qué tal?"
+Apparently this is a lesser used phrase in the contexts they are used to, and they have never heard it before.
+
+\subsection{Self-Reported Speaking Ability}
+Self-reported speaking ability gains are measured on a scale of 1-5 using the participants' responses from the survey administered before and after each session, where 1 is low speaking ability and 5 is high speaking ability.
+The first post-session indicated a trend toward the median of 2, with one respondent decreasing from a 3 to a 2, many of those who responded 1 increasing to a 2, and all those who started with 2 maintaining that score.
+The pre-session results were nearly the same.
+From the end of session 1 to the beginning of session 2, respondents tended to revert to their initial responses.
+The post-session results from session 2 were markedly higher than all previous responses.
+This supports the hypothesis that conversing with Ana will result in increased confidence in a participant's speaking abilities.
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=8.45cm]{graph1.png}
+    \caption{Change in participants' self-reported speaking ability before and after 2 sessions.}
+    \label{fig:graph1}
+\end{figure}
+
+\subsection{Measured Speaking Ability}
+The changes in measured speaking ability neither support nor disprove the hypothesis, as there is an expected change in error rate, but an unexpected change in rate of speech, with both results being relatively statistically insignificant.
+
+\subsubsection{Error Rate}
+Error rate is measured by comparing the total number of words spoken against the number of erroneous words.
+As seen in Figure 3, general there is a slight decrease in the error rate overall, with the median difference between session 1 and session 2 being -1.56.
+Only one participant has a notably higher error rate in session 2, which even then was not a large margin, with most participants maintaining or improving their accuracy.
+This suggests that between sessions 1 and 2, participants may have made some sort of effort to become more aware of the vocabulary being used around them, or that they made an effort to improve their accuracy in terms of vocabulary or grammar.
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=8.45cm]{graph2.jpg}
+    \caption{Change in participants' self-reported speaking ability before and after 2 sessions.}
+    \label{fig:graph2}
+\end{figure}
+
+\subsubsection{Rate of Speech}
+The average rate of speech is measured by comparing each response's words per second, and then taking the average of all of a participant's responses.
+As shown in Figure 4, there is virtually no change in average rate of speech, with the median difference between sessions 1 and 2 being -0.02.
+We expected the rate of speech to increase, however the median between sessions 1 and 2 staying nearly unchanged.
+There appears to be inconsistent results between participants, with some increasing their rate of speech, and other decreasing, but none really maintaining.
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=8.45cm]{graph3.jpg}
+    \caption{Change in participants' self-reported speaking ability before and after 2 sessions.}
+    \label{fig:graph3}
+\end{figure}
+
+
+\section{Conclusion}
+This paper discussed the results of an experiment that sought to determine the effects of conversing with a virtual agent named Ana on a group of passively bilingual Spanish-speaking participants.
+To do this, we had the participants fill out a survey to report their current speaking abilities before and after each session of conversation, of which there were 2 total.
+We found that there was a small increase in the confidence of the participants after the 2 sessions, but there were inconsistent results that indicated minimal to no increase in actual measured speaking ability.
+Future work should probe whether the results of this experiment can be translated to a group of participants who do not come from Spanish-speaking households.
+
+\section{Acknowledgement}
+Special thanks to my mother, Susana Ramirez-Aragon, for obtaining and relaying the contact information of each of the participants.
+
+%\bibliographystyle{abbrv}
+\bibliographystyle{abbrv-doi}
+%\bibliographystyle{abbrv-doi-narrow}
+%\bibliographystyle{abbrv-doi-hyperref}
+%\bibliographystyle{abbrv-doi-hyperref-narrow}
+
+\bibliography{template}
+\end{document}
