@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CS 464 Spring 2022 CSU: Evaluating Improvements in Speaking Ability in Passive Speakers Aided by a Virtual Avatar</title>
+<style>
+body {background-color: white;}
+h1   {color: black;}
+h2   {color: blue;}
+h3   {color: blue;}
+p    {color: black;}
+</style>
+</head>
+<body>
+
+       <h1>Evaluating Improvements in Speaking Ability in Passive Speakers Aided by a Virtual Avatar</h1>
+        <h2>Maria Samson</h2>
+        <h3>CS 464 Spring 2022</h3>
+        <h1>Abstract</h1>
+	<p>This paper discusses computer assisted language learning through related works and by also
+discussing a prototype which would further explore the effects of learning Spanish through
+a virtual agent.</p>
+        <h1>Introduction</h1>
+        <p>Digital language learning services have been steadily rising in popularity \cite{Sung:2015}.
+After a certain point, however, it is not necessary to continue memorizing new vocabulary, but to enhance one’s conversational speaking abilities.
+The best method of accomplishing this is through simple practice – conversing with someone fluent in the language \cite{Burger:2015}.
+Most people, for whatever reasons, do not have access to a tutor that can evaluate their skills and help them improve.
+It is for these reasons that this proposal puts forth an application that assists in language learning by engaging with the user through various scenarios in the selected language, where the user will be able to respond using a microphone.
+We hypothesize that participants will have increased accuracy and confidence in their Spanish-speaking abilities as a result of conversing with a virtual avatar over 2 sessions.
+For the purposes of this prototype, only the Spanish language will be used.&nbsp;</p>
+        <h1>Methodology</h1>
+        <p>The core component of this project is a virtual agent that speaks to the user in a casual way by mimicking a real conversation one would have with a friendly acquaintance.
+This agent will be henceforth referred to as Ana.
+The user will select a language to begin practicing at the beginning of the conversation, to begin, this language will be Spanish.
+Once a language has been selected, Ana appears and introduces itself to the user before then asking the user questions about themself in a polite conversational manner.
+These questions are determined to be generic enough and at an appropriate level that the user will likely have some vocabulary sufficient to answer the question. For each question or prompt, the user will be instructed to respond using a provided microphone as the input mechanism.
+This microphone will not be registered by Ana, but will allow the experiment proctor to respond using a Wizard of Oz approach.
+The proctor will command Ana to respond using a variety of prerecorded, computer generated sentences, provided that what the user said made sense, otherwise it will politely inform the user that it did not understand, and if they could please repeat that.
+After several unsuccessful attempts from the user in a row, Ana will simply change the subject. 
+The user will use whatever computer they have at their disposal to interact with Ana, which will be screen-shared via the experiment proctor.
+
+The prototype of Ana will appear quite simply: Ana, a cartoon-looking woman, is standing in what appears to be a cafe (see Figure 1).
+We decided to use a two-dimensional virtual avatar in order to avoid accidentally entering the "uncanny valley" with her as it is easier to avoid in 2D \cite{Seymour:2019}.
+Accidentally entering the uncanny valley would inevitably have confounding effects on the experiment due to participants feeling uncomfortable from her uncanniness. 
+The presence of the agent alone is what we are studying, so there is no need to include fancy detail or graphics animations.
+She will have a few preset facial expressions (happy, confused, neutral), but nothing beyond that.
+She is operated by the experiment proctor using the keyboard as a soundboard to play prerecorded, computer-generated questions, answers, and responses, unbeknownst to the participant.
+</p>
+<p>10 participants were used in this study, of ages varying between 13-24.
+They are all passively bilingual due to having at least one Spanish-speaking parent -- meaning they have native or near-native listening/comprehension fluency, but limited speaking ability.
+Given the participants' similar upbringings, they also have largely similar vocabularies deriving from northern Mexico, which adds an added layer of control to the experiment.
+It also allows us to evaluate based solely on speaking ability, as there are extremely low chances of speech errors being attributed to inaccurate comprehension.
+</p>
+<p>Over a Discord call, after making general small talk, the experimenter explained the objective of this experiment and outlined the procedure.
+The participant then filled out a survey logging their current Spanish abilities.
+This survey was used to exclude participants with speaking fluency over the desired threshold for this experiment.
+The survey logged the user's self reported (1-5) Spanish listening comprehension skills, Spanish speaking skills, Spanish reading skills, frequency in which they listen to Spanish, frequency in which they speak in Spanish, and frequency in which they read in Spanish. 
+
+Using Discord's screen-sharing feature, the experimenter pulled up Ana and demonstrated what she sounds like.
+This also allowed the participant to make any necessary changes to their computer system, such as increasing the volume.
+Once the participant indicated they were ready, the proctor began using Ana to ask questions to the user, and generally engage in conversation.
+When Ana's conversation options were exhausted, or the participant indicated they wished to end the conversation, the participant was then asked to fill out the same survey as before.
+One week later, the procedure was repeated, using different prerecorded questions and answers from Ana, but which were approximately the same level of difficulty to respond to.</p>
+        <h1>Results & Discussion</h1>
+<p> Please refer to Full Paper pdf for figures and tables. </p>
+        <p>Self-reported speaking ability gains are measured on a scale of 1-5 using the participants' responses from the survey administered before and after each session, where 1 is low speaking ability and 5 is high speaking ability.
+The first post-session indicated a trend toward the median of 2, with one respondent decreasing from a 3 to a 2, many of those who responded 1 increasing to a 2, and all those who started with 2 maintaining that score.
+The pre-session results were nearly the same.
+From the end of session 1 to the beginning of session 2, respondents tended to revert to their initial responses.
+The post-session results from session 2 were markedly higher than all previous responses.
+This supports the hypothesis that conversing with Ana will result in increased confidence in a participant's speaking abilities
+The changes in measured speaking ability neither support nor disprove the hypothesis, as there is an expected change in error rate, but an unexpected change in rate of speech, with both results being relatively statistically insignificant.
+.
+The average rate of speech is measured by comparing each response's words per second, and then taking the average of all of a participant's responses.
+As shown in Figure 4, there is virtually no change in average rate of speech, with the median difference between sessions 1 and 2 being -0.02.
+We expected the rate of speech to increase, however the median between sessions 1 and 2 staying nearly unchanged.
+There appears to be inconsistent results between participants, with some increasing their rate of speech, and other decreasing, but none really maintaining.&nbsp;</p>
+        <h1>Additional Resources</h1>
+        <p>Full Paper pdf: https://drive.google.com/file/d/1YVLiGhBjR9vmly7qIRf3zc7DrS9jaC4B/view?usp=sharing</p>
+        <p>Full Paper latex file: https://github.com/csu-hci-projects/HCI-and-Language-Learning/blob/main/finalpaper.tex</p>
+        <p>Github/Source code: https://github.com/csu-hci-projects/HCI-and-Language-Learning</p>
+        <p>Presentation video: https://youtu.be/1AHTaJ58oM4</p>
+        <p>Demo video: https://youtu.be/Rg6j9ergem8&nbsp;</p>
+        <p></p>
+
+</body>
+</html>
