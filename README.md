@@ -11,14 +11,14 @@ https://youtu.be/Rg6j9ergem8
 Requires python3 and pip.
 The following instructions have only been tested on Windows 10.
 
-After forking/cloning, run `pip install requirements.txt`
+After forking/cloning, run `pip install -r requirements.txt`
 
 To generate the voicelines, run `py generateVoice.py`
 
 To begin program, run `py main.py`
 
-The soundboard is programmed as follows:
-* 1-6 ask questions
-* q-y offer canned responses to the user's answer
-* a-h is Ana's answer to the question.
-* 0 tells the user 'I did not understand that'
+The soundboard is programmed into your keyboard as follows:
+* keys 1-6 ask questions
+* keys q-y offer canned responses to the user's answer
+* keys a-h is Ana's answer to the question.
+* key 0 tells the user 'I did not understand that'
